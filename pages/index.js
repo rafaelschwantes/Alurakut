@@ -1,4 +1,6 @@
 import React from 'react';
+import nookies from 'nookies';
+import jwt from 'jsonwebtoken';
 import MainGrid from '../src/components/MainGrid'
 import Box from '../src/components/Box'
 import { AlurakutMenu, AlurakutProfileSidebarMenuDefault, OrkutNostalgicIconSet } from '../src/lib/AlurakutCommons';
@@ -44,8 +46,8 @@ function ProfileRelationsBox(propriedades) {
   )
 }
 
-export default function Home() {
-  const usuarioAleatorio = 'rafaelschwantes';
+export default function Home(props) {
+  const usuarioAleatorio = props.githubUser;
   const [comunidades, setComunidades] = React.useState([]);
   // const comunidades = comunidades[0];
   // const alteradorDeComunidades/setComunidades = comunidades[1];
@@ -133,10 +135,10 @@ export default function Home() {
 
                 const comunidade = {
                   title: dadosDoForm.get('title'),
-                  image_url: dadosDoForm.get('image'),
-                  creator_slug: usuarioAleatorio,
-                  //imageUrl: dadosDoForm.get('image'),
-                  //creatorSlug: usuarioAleatorio,
+                  //image_url: dadosDoForm.get('image'),
+                  //creator_slug: usuarioAleatorio,
+                  imageUrl: dadosDoForm.get('image'),
+                  creatorSlug: usuarioAleatorio,
                 }
                 
                 fetch('/api/comunidades', {
@@ -218,3 +220,31 @@ export default function Home() {
     </>
   )
 }
+
+
+export async function getServerSideProps(context) {
+  const cookies = nookies.get(context)
+  const token = cookies.USER_TOKEN;
+  const { isAuthenticated } = await fetch('https://alurakut.vercel.app/api/auth', {
+    headers: {
+        Authorization: token
+      }
+  })
+  .then((resposta) => resposta.json())
+
+  if(!isAuthenticated) {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false,
+      }
+    }
+  }
+
+  const { githubUser } = jwt.decode(token);
+  return {
+    props: {
+      githubUser
+    }, // will be passed to the page component as props
+  }
+} 

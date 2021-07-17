@@ -1784,7 +1784,7 @@ _s(AlurakutMenu, "RQAUz5wknpCAe4Aflmp8yMbnXOU=");
 _c2 = AlurakutMenu;
 AlurakutMenu.Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_6__.default.header.withConfig({
   displayName: "AlurakutCommons__Wrapper",
-  componentId: "sc-sd6wiu-0"
+  componentId: "sc-1vsk6a-0"
 })(["width:100%;background-color:#308BC5;.alurakutMenuProfileSidebar{background:white;position:fixed;z-index:100;padding:46px;bottom:0;left:0;right:0;top:48px;transition:.3s;pointer-events:", ";opacity:", ";transform:", ";@media(min-width:860px){display:none;}> div{max-width:400px;margin:auto;}a{font-size:18px;}.boxLink{font-size:18px;color:#2E7BB4;-webkit-text-decoration:none;text-decoration:none;font-weight:800;}hr{margin-top:12px;margin-bottom:8px;border-color:transparent;border-bottom-color:#ECF2FA;}}.container{background-color:#308BC5;padding:7px 16px;max-width:1110px;margin:auto;display:flex;justify-content:space-between;position:relative;z-index:101;@media(min-width:860px){justify-content:flex-start;}button{border:0;background:transparent;align-self:center;display:inline-block;@media(min-width:860px){display:none;}}nav{display:none;@media(min-width:860px){display:flex;}a{font-size:12px;color:white;padding:10px 16px;position:relative;text-decoration:none;&:after{content:\" \";background-color:#5292C1;display:block;position:absolute;width:1px;height:12px;margin:auto;left:0;top:0;bottom:0;}}}input{color:#ffffff;background:#5579A1;padding:10px 42px;border:0;background-image:url(", ");background-position:15px center;background-repeat:no-repeat;border-radius:1000px;font-size:12px;::placeholder{color:#ffffff;opacity:1;}}}"], function (_ref3) {
   var isMenuOpen = _ref3.isMenuOpen;
   return isMenuOpen ? 'all' : 'none';
@@ -1797,7 +1797,7 @@ AlurakutMenu.Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_6__.default.he
 }, "".concat(BASE_URL, "/icons/search.svg"));
 AlurakutMenu.Logo = styled_components__WEBPACK_IMPORTED_MODULE_6__.default.img.withConfig({
   displayName: "AlurakutCommons__Logo",
-  componentId: "sc-sd6wiu-1"
+  componentId: "sc-1vsk6a-1"
 })(["background-color:#ffffff;padding:9px 14px;border-radius:1000px;height:34px;"]);
 
 function AlurakutMenuProfileSidebar(_ref6) {
@@ -1963,7 +1963,7 @@ function AlurakutProfileSidebarMenuDefault() {
 _c4 = AlurakutProfileSidebarMenuDefault;
 AlurakutProfileSidebarMenuDefault.Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_6__.default.div.withConfig({
   displayName: "AlurakutCommons__Wrapper",
-  componentId: "sc-sd6wiu-2"
+  componentId: "sc-1vsk6a-2"
 })(["a{font-size:12px;color:#2E7BB4;margin-bottom:16px;display:flex;align-items:center;justify-content:flex-start;text-decoration:none;img{width:16px;height:16px;margin-right:5px;}}"]); // ================================================================================================================
 // OrkutNostalgicIconSet
 // ================================================================================================================
@@ -2094,7 +2094,7 @@ function OrkutNostalgicIconSet(props) {
 _c5 = OrkutNostalgicIconSet;
 OrkutNostalgicIconSet.List = styled_components__WEBPACK_IMPORTED_MODULE_6__.default.ul.withConfig({
   displayName: "AlurakutCommons__List",
-  componentId: "sc-sd6wiu-3"
+  componentId: "sc-1vsk6a-3"
 })(["margin-top:32px;list-style:none;display:flex;justify-content:space-between;flex-wrap:wrap;li{font-size:12px;color:#5A5A5A;display:grid;grid-template-areas:\"title title\" \"number number\";&:not(:last-child){margin-right:5px;}.OrkutNostalgicIconSet__title{display:block;font-style:italic;}.OrkutNostalgicIconSet__number{min-width:15px;display:flex;align-items:center;justify-content:flex-start;.OrkutNostalgicIconSet__iconSample{margin-right:7px;}}}"]); // ================================================================================================================
 // Login Page
 // ================================================================================================================
